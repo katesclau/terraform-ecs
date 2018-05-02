@@ -32,6 +32,9 @@ module "ecs_instances" {
   account                 = "${var.account}"
 }
 
+variable "owner" {}
+variable "account" {}
+
 resource "aws_ecs_cluster" "cluster" {
   name = "${var.cluster}"
 }
