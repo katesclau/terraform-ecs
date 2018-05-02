@@ -68,6 +68,14 @@ variable "key_name" {
   description = "SSH key name to be used"
 }
 
+variable "owner" {
+  description = "Owner team email"
+}
+
+variable "account" {
+  description = "Accounting tag for billing control"
+}
+
 variable "custom_userdata" {
   default     = ""
   description = "Inject extra command in the instance template to be run on boot"
