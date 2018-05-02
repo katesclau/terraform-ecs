@@ -14,6 +14,9 @@ module "ecs" {
   key_name             = "${var.key_name}"
   instance_type        = "${var.instance_type}"
   ecs_aws_ami          = "${var.ecs_aws_ami}"
+  #tags
+  owner                = "${var.owner}"
+  account              = "${var.account}"
 }
 
 variable "vpc_cidr" {}
@@ -24,6 +27,8 @@ variable "desired_capacity" {}
 variable "instance_type" {}
 variable "ecs_aws_ami" {}
 variable "key_name" {}
+variable "owner" {}
+variable "account" {}
 
 variable "private_subnet_cidrs" {
   type = "list"
