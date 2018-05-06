@@ -45,3 +45,7 @@ variable "availability_zones" {
 output "default_alb_target_group" {
   value = "${module.ecs.default_alb_target_group}"
 }
+
+output "ecs_cluster_id" {
+  value = "${module.ecs.ecs_cluster_id}"
+}
