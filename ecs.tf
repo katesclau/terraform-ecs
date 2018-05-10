@@ -14,11 +14,13 @@ module "ecs" {
   key_name             = "${var.key_name}"
   instance_type        = "${var.instance_type}"
   ecs_aws_ami          = "${var.ecs_aws_ami}"
+  debug                = "${var.debug}"
   #tags
   owner                = "${var.owner}"
   account              = "${var.account}"
 }
 
+variable "debug" {}
 variable "vpc_cidr" {}
 variable "environment" {}
 variable "max_size" {}

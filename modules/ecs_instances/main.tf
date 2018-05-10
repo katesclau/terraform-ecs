@@ -35,6 +35,7 @@ resource "aws_launch_configuration" "launch" {
   user_data            = "${data.template_file.user_data.rendered}"
   iam_instance_profile = "${var.iam_instance_profile_id}"
   key_name             = "${var.key_name}"
+  associate_public_ip_address = "${var.debug}"
 
   # aws_launch_configuration can not be modified.
   # Therefore we use create_before_destroy so that a new modified aws_launch_configuration can be created

@@ -27,11 +27,13 @@ module "ecs_instances" {
   depends_id              = "${module.network.depends_id}"
   custom_userdata         = "${var.custom_userdata}"
   cloudwatch_prefix       = "${var.cloudwatch_prefix}"
+  debug                   = "${var.debug}"
   # tags
   owner                   = "${var.owner}"
   account                 = "${var.account}"
 }
 
+variable "debug" {  default = false  }
 variable "owner" {}
 variable "account" {}
 

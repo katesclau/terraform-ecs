@@ -1,3 +1,8 @@
+variable "debug" {
+  description = "Allow external access to instances"
+  default = false
+}
+
 variable "environment" {
   description = "The name of the environment"
 }
